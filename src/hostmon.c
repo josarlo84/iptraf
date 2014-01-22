@@ -95,6 +95,7 @@ static void writeethlog(struct ethtabent *list, unsigned long nsecs, FILE *fd)
 	struct ethtabent *ptmp = list;
 
 	genatime(time(NULL), atime);
+	rewind(fd);
 
 	fprintf(fd, "\n*** LAN traffic log, generated %s\n\n", atime);
 

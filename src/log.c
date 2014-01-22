@@ -85,7 +85,7 @@ void input_logfile(char *target, int *logging)
 
 void opentlog(FILE ** fd, char *logfilename)
 {
-	*fd = fopen(logfilename, "a");
+	*fd = fopen(logfilename, "w");
 
 	if (*fd == NULL)
 		tui_error(ANYKEY_MSG, "Unable to open log file");
